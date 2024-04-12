@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tax calculator</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="container">
+    
+    <form class="form">
+        
+        <P >Enter gross annual income <span title="Gross annual income in your total salary in a year before any deduction">?</span> </P>
+      <div class="input-wrapper">
+        <input type="number"  id="annual_income" name="annual_income"   placeholder="Enter gross annual income" required >   <div class="error-message" id="annual_income_error">Please enter a valid number</div>
+       </div>
+        
+
+
+        <P>Enter extra income <span title="Extra income from all the other resources">?</span></P>
+        <div class="input-wrapper">
+        <input id="extra_income" value="100000"  type="number" placeholder="Enter extra income from other sources" required><div class="error-message" >Please enter a valid number</div>
+        </div>
+
+        <P>Enter age group <span title="what is your age">?</span></P>
+
+        <div class="input-wrapper">
+        <input id="age"  value="34" type="number" placeholder="Age" required><div class="error-message" >Please enter a valid number</div>
+        </div>
+
+
+
+        <P>Enter total applicabe deductions <span title="your total salary after deduction">?</span></P>
+        <div class="input-wrapper">
+        <input id="total_salary" value="30000"  type="number" placeholder="Add total applicable deductions" required><div class="error-message" >Please enter a valid number</div>
+        </div>
+        <br><br>
+
+
+        <button id="submit_button">Submit</button>
+
+
+    </form>
+</div>
+
+<!-- Add a div for the pop-up -->
+<div id="popup" class="popup">
+    <div id="tax_result_popup" class="tax-result-popup"></div>
+    <button  id="second_button">Close</button>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
