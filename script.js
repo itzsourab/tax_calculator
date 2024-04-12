@@ -15,6 +15,7 @@ function calculateTax() {
     const age = parseInt(ageInput.value);
     
     let tax_rate = 0;
+    let tax_amount = 0;
     
     console.log("Gross Income:", gross_income);
     console.log("Deductions:", deductions);
@@ -43,40 +44,11 @@ function calculateTax() {
         console.log("Tax Amount:", tax_amount);
 
       
-    } else if (taxable_income > 0) {
+    } else if (taxable_income < 800000) {
         // Determine the tax rate based on age for taxable income less than or equal to 800000
-        if (age < 40) {
-            tax_rate = 0.3;
-        } else if (age >= 40 && age < 60) {
-            tax_rate = 0.4;
-        } else {
-            tax_rate = 0.1;
-        }
-        console.log("Tax Rate:", tax_rate);
-    
-        // Calculate tax amount for taxable income less than or equal to 800000
-        tax_amount = taxable_income * tax_rate;
-        console.log("Tax Amount:", tax_amount);
+         tax_result_popup.textContent =`Your overall income is  ${ taxable_income}`
     }
-    //  const tax_amount = taxable_income*tax_rate;
-    // let tax_amount = 0;
-    
-    // if(taxable_income>0){
-    //     tax_amount = taxable_income * tax_rate;
-    //     console.log("Tax Amount:", tax_amount);
-    // }else{
-    //     console.log("value is not greater then ")
-    // }
-   
-
-    // const tax_amount = taxable_incometax_rate;
-
-    // console.log("Tax Amount:", tax_amount);
-    
-    
-    // tax_result_popup.textContent = `Total tax is : ${tax_amount.toFixed(2)} Ruppes`;
-    // Add the CSS class to the tax_result_popup element
-    
+        // Calculate tax amount for taxable income less than or equal to 800000
  
     tax_result_popup.textContent =`Your overall income is  ${ taxable_income-tax_amount},Total tax is ${tax_amount.toFixed(2)}Ruppes`;
     
